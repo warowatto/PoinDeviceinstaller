@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="payot.com.poindeviceinstaller.MainActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_companyNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="사업자 등록번호"
+            android:inputType="numberSigned"
+            android:digits="0123456789-" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="단위 투입 금액" />
+
+        <Spinner
+            android:id="@+id/spinner_coinType"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:entries="@array/coin_type"></Spinner>
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_signalOffset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="신호간격(ms)"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_signalCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="횟수(회)"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/edit_defaultPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="상품 최소가"
+            android:inputType="number" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="등록하기"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="141dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+</LinearLayout>
